@@ -11,17 +11,285 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
   }
+}
+
+.nav-li-style {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-li-style-active {
+  position: relative;
+}
+
+.nav-li-style-active::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  background-color: #D1E4E8;
+  bottom: 15px;
+  left: 0;
+  transition: .3s ease-in-out;
+  opacity: 1;
+}
+
+.nav-li-style::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  background-color: #D1E4E8;
+  bottom: 15px;
+  left: 0;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+.nav-li-style:hover {
+  cursor: pointer;
+  color: #D1E4E8;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+.nav-li-style:hover::before {
+  opacity: 1;
+  transition: .3s ease-in-out;
+}
+
+.topic p {
+  position: relative;
+  color: #f8ffff;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.topic p::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1.1px;
+  background-color: #f8ffff;
+  left: 0;
+  bottom: -2px;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.topic p:hover::before {
+  transition: all .3s ease;
+  opacity: 1;
+}
+
+.header__bottom__details__active {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #1b3f85;
+  position: absolute;
+  display: block;
+  font-family: 'Proba Pro', Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+  color: white;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@font-face {
+  font-family: 'Proba Pro Lt';
+  src: url('./../assets/fonts/ProbaPro-Light.eot');
+  src: local('Proba Pro Light'), local('ProbaPro-Light'),
+    url('./../assets/fonts/ProbaPro-Light.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-Light.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-Light.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro SmBdIt';
+  src: url('./../assets/fonts/ProbaPro-SemiBoldItalic.eot');
+  src: local('Proba Pro SemiBold Italic'), local('ProbaPro-SemiBoldItalic'),
+    url('./../assets/fonts/ProbaPro-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-SemiBoldItalic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-SemiBoldItalic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proba Pro ExLt';
+  src: url('./../assets/fonts/ProbaPro-ExtraLight.eot');
+  src: local('Proba Pro ExtraLight'), local('ProbaPro-ExtraLight'),
+    url('./../assets/fonts/ProbaPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-ExtraLight.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-ExtraLight.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro Bd';
+  src: url('./../assets/fonts/ProbaPro-Bold.eot');
+  src: local('Proba Pro Bold'), local('ProbaPro-Bold'),
+    url('./../assets/fonts/ProbaPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-Bold.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-Bold.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro Md';
+  src: url('./../assets/fonts/ProbaPro-Medium.eot');
+  src: local('Proba Pro Medium'), local('ProbaPro-Medium'),
+    url('./../assets/fonts/ProbaPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-Medium.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-Medium.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro Th';
+  src: url('./../assets/fonts/ProbaPro-Thin.eot');
+  src: local('Proba Pro Thin'), local('ProbaPro-Thin'),
+    url('./../assets/fonts/ProbaPro-Thin.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-Thin.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-Thin.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro ExLtIt';
+  src: url('./../assets/fonts/ProbaPro-ExtraLightItalic.eot');
+  src: local('Proba Pro ExtraLight Italic'), local('ProbaPro-ExtraLightItalic'),
+    url('./../assets/fonts/ProbaPro-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-ExtraLightItalic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-ExtraLightItalic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proba Pro SmBd';
+  src: url('./../assets/fonts/ProbaPro-SemiBold.eot');
+  src: local('Proba Pro SemiBold'), local('ProbaPro-SemiBold'),
+    url('./../assets/fonts/ProbaPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-SemiBold.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-SemiBold.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro MdIt';
+  src: url('./../assets/fonts/ProbaPro-MediumItalic.eot');
+  src: local('Proba Pro Medium Italic'), local('ProbaPro-MediumItalic'),
+    url('./../assets/fonts/ProbaPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-MediumItalic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-MediumItalic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proba Pro It';
+  src: url('./../assets/fonts/ProbaPro-BoldItalic.eot');
+  src: local('Proba Pro Bold Italic'), local('ProbaPro-BoldItalic'),
+    url('./../assets/fonts/ProbaPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-BoldItalic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-BoldItalic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proba Pro Lt It';
+  src: url('./../assets/fonts/ProbaPro-LightItalic.eot');
+  src: local('Proba Pro Light Italic'), local('ProbaPro-LightItalic'),
+    url('./../assets/fonts/ProbaPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-LightItalic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-LightItalic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proba Pro Th It';
+  src: url('./../assets/fonts/ProbaPro-ThinItalic.eot');
+  src: local('Proba Pro Thin Italic'), local('ProbaPro-ThinItalic'),
+    url('./../assets/fonts/ProbaPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-ThinItalic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-ThinItalic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proba Pro';
+  src: url('./../assets/fonts/ProbaPro-Regular.eot');
+  src: local('Proba Pro Regular'), local('ProbaPro-Regular'),
+    url('./../assets/fonts/ProbaPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-Regular.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-Regular.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proba Pro';
+  src: url('./../assets/fonts/ProbaPro-Italic.eot');
+  src: local('Proba Pro Italic'), local('ProbaPro-Italic'),
+    url('./../assets/fonts/ProbaPro-Italic.eot?#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/ProbaPro-Italic.woff2') format('woff2'),
+    url('./../assets/fonts/ProbaPro-Italic.woff') format('woff'),
+    url('./../assets/fonts/ProbaPro-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'RobotoMono';
+  src: url('./../assets/fonts/RobotoMono-Medium.eot');
+  src: local('RobotoMono-Medium'), local('Roboto Mono Medium'),
+    url('./../assets/fonts/RobotoMono-Medium.eot#iefix') format('embedded-opentype'),
+    url('./../assets/fonts/RobotoMono-Medium.woff2') format('woff2'),
+    url('./../assets/fonts/RobotoMono-Medium.woff') format('woff'),
+    url('./../assets/fonts/RobotoMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-variant-small-caps {
+  font-variant: small-caps;
 }
