@@ -1,3 +1,4 @@
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -15,9 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className + " " + "min-h-screen flex flex-col bg-gradient-to-t from-slate-100 to-white text-black"}>
         <Header />
         {children}
-        <footer className='mt-auto bg-headerSecond py-3'>
-          FOOTER
-        </footer>
+        <Footer />
       </body>
     </html>
   )

@@ -103,6 +103,28 @@
   color: white;
 }
 
+.cc,.beta {
+  position: relative;
+    padding-left: 3.4rem;
+    font-size: 0.8em;
+    line-height: 1.428em;
+    letter-spacing: 1px;
+    padding-bottom: 1.25rem;
+    font-family: 'Proba Pro';
+}
+
+.cc a, .beta a {
+  text-decoration: underline;
+}
+
+.beta {
+    background: url('./../public/beta.svg') 0 0 no-repeat;
+}
+
+.cc {
+    background: url('./../public/cc.png') 0 0 no-repeat;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,

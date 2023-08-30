@@ -239,14 +239,12 @@ const Header = (props) => {
                                 )) :
                                     <div className='flex flex-row justify-evenly w-full'>
                                         <div>
-                                            {mapIsLoading === true && <div>Preloader</div>}
                                             <iframe
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.5129444067893!2d28.476154676577178!3d49.22876337138476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b718250cbd5%3A0xe049f50b59eb2eb!2z0LLRg9C70LjRhtGPINCT0LvRltCx0LAg0KPRgdC_0LXQvdGB0YzQutC-0LPQviwgODMsINCS0ZbQvdC90LjRhtGPLCDQktGW0L3QvdC40YbRjNC60LAg0L7QsdC70LDRgdGC0YwsIDIxMDAw!5e0!3m2!1suk!2sua!4v1687854357312!5m2!1suk!2sua"
                                                 width="400"
                                                 height="300"
                                                 style={{ border: 0 }}
                                                 allowFullScreen=""
-                                                loading="lazy"
                                                 referrerPolicy="no-referrer-when-downgrade"
                                             >
                                                 <img src={'/logoWhiteTest.png'} alt="" />
