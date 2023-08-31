@@ -202,7 +202,7 @@ const Header = (props) => {
             <div className={s.header__bottom__wrapper}>
                 <div className="bg-headerSecond relative z-10">
                     <div className="container mx-auto">
-                        <nav className='w-full flex flex-row justify-center items-center relative'>
+                        <nav className='w-full flex flex-row justify-center items-center relative px-2'>
                             <ul className="h-16 flex flex-row justify-between items-center text-white w-full font-probapro text-lg leading-6 font-semibold antialiased text-center">
                                 <li className={openedTab === "Головна" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => { navigate('/'); setOpenedTab(undefined) }}>
                                     Головна
@@ -223,7 +223,7 @@ const Header = (props) => {
                         </nav>
                     </div>
                     <div className={openedTab !== undefined ? `${'hidden absolute'} ${'header__bottom__details__active'}` : `${'hidden absolute'}`}>
-                        <div className="container mx-auto">
+                        <div className="container mx-auto px-4">
                             <div className='flex flex-row gap-10'>
                                 {openedTab !== 'Контакти' ? subcategories.map((subcategory) => (
                                     <div key={subcategory}>
