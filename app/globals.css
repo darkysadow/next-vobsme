@@ -125,6 +125,21 @@
     background: url('./../public/cc.png') 0 0 no-repeat;
 }
 
+.dangerously-set-news p {
+  font-size: 1.2rem;
+}
+
+.dangerously-set-news p img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dangerously-set-news p strong, .dangerously-set-news p u, .dangerously-set-news p em {
+   display: inline ;
+}
+
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
