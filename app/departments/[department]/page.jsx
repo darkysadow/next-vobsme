@@ -9,8 +9,8 @@ import Link from "next/link";
 
 export default async function Department({params}) {
     const departmentData = await fetcher(`${process.env.STRAPI_API_URL}/slugify/slugs/department/${params.department}?populate=head_of_department&populate=head_of_department.photo`)
-    const headOfDepartment = departmentData.data.attributes.head_of_department.data.attributes
-    const headOfDepartmentPhoto = headOfDepartment.photo.data.attributes
+    const headOfDepartment = departmentData.data.attributes.head_of_department.data ? departmentData.data.attributes.head_of_department.data.attributes : undefined
+    const headOfDepartmentPhoto = headOfDepartment !== undefined && headOfDepartment.photo.data.attributes
     console.log(headOfDepartmentPhoto);
     const description = await markdownToHTML(departmentData.data.attributes.description)
     return (
@@ -19,7 +19,12 @@ export default async function Department({params}) {
                 {departmentData.data.attributes.title}
             </h1>
             <div dangerouslySetInnerHTML={{__html: description}} className="dangerously-set-news"></div>
-            <h2 className="text-center font-semibold text-2xl text-headerSecond my-6">Завідуючий відділенням</h2>
+            
+            {departmentData.data.attributes.head_of_department.data && 
+            <>
+            <h2 className="text-center font-semibold text-2xl text-headerSecond my-6">
+                Завідуючий {departmentData.data.attributes.title.includes('Відділення') ? "відділенням" : "відділом"}
+            </h2>
             <div className="flex flex-row justify-evenly">
                 <div className="flex flex-col font-probaprosmbd text-headerSecond gap-y-3">
                     <h2 className="text-headerFirst text-xl mb-4 ">{headOfDepartment.name}</h2>
@@ -33,7 +38,7 @@ export default async function Department({params}) {
                     </div>
                 </div>
                 <Image src={`${process.env.STRAPI_URL}${headOfDepartmentPhoto.url}`} width={300} height={400} alt={headOfDepartmentPhoto.name} />
-            </div>
+            </div></>}
         </main>
     )
 }

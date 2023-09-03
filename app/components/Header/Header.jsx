@@ -45,61 +45,61 @@ const Header = (props) => {
             category: 'ВОБ СМЕ'
         },
         {
-            link: '6',
+            link: '/departments/viddil-sme-trupiv',
             text: 'Відділ СМЕ трупів',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '7',
+            link: '/departments/viddil-komisiinykh-sme',
             text: 'Відділ комісійних СМЕ',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '8',
+            link: '/departments/viddil-sme-poterpilykh',
             text: 'Відділ СМЕ потерпілих',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '9',
+            link: '/departments/mizhraionni-viddilennia',
             text: 'Міжрайонні відділення',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: 'forensis',
+            link: '/departments/viddilennia-sudovo-medychnoi-kryminalistyky',
             text: 'Відділення СМ криміналістики',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '11',
+            link: '/departments/viddilennia-sm-toksykolohii',
             text: 'Відділення СМ токсикології',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '12',
+            link: '/departments/viddilennia-sm-histolohii',
             text: 'Відділення СМ гістології',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '13',
+            link: '/departments/viddilennia-sm-imunolohii',
             text: 'Відділення СМ імунології',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '14',
+            link: '/departments/viddilennia-sm-tsytolohii',
             text: 'Відділення СМ цитології',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
         },
         {
-            link: '15',
+            link: '/departments/viddilennia-cherhovykh-sm-ekspertiv',
             text: 'Відділення чергових СМ експертів',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'
