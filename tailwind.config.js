@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     colors: {
       'headerFirst': "#133f9e",
-      'headerSecond': '#1b3f85' 
+      'headerSecond': '#1b3f85',
+      'secondOpacity': '#1b3e853e',
     },
     extend: {
       backgroundImage: {

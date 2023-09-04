@@ -3,7 +3,6 @@ import Link from "next/link";
 import FontAwesomeNewspaper from "../fontAwesomeClientComponents/Newspaper";
 
 export default function NewsCard({ id, item }) {
-    console.log(item);
     const convertDate = (dateString) => {
         const months = [
           'січня',
