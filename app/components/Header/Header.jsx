@@ -69,7 +69,7 @@ const Header = (props) => {
             category: 'ВОБ СМЕ'
         },
         {
-            link: '/departments/viddilennia-sudovo-medychnoi-kryminalistyky',
+            link: '/departments/viddilennia-sm-kryminalistyky',
             text: 'Відділення СМ криміналістики',
             subcategory: 'Структура бюро',
             category: 'ВОБ СМЕ'

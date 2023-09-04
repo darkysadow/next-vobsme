@@ -125,6 +125,72 @@
     background: url('./../public/cc.png') 0 0 no-repeat;
 }
 
+.dangerously-set-department {
+  @apply font-probapro
+}
+
+.dangerously-set-department strong, .dangerously-set-department u, .dangerously-set-department em {
+  display: inline ;
+}
+
+.dangerously-set-department img {
+  margin: 0 auto;
+}
+
+.dangerously-set-department blockquote {
+  border-left: 3px solid #1b3f85;
+  @apply relative w-full flex flex-col justify-center py-3 bg-[#8aa3ff10] my-3;
+}
+
+.dangerously-set-department blockquote::before {
+  position: absolute;
+  content: open-quote;
+  top: -10px;
+  left: 10px;
+  font-size: 78px;
+  color: #1b3f85;
+}
+
+.dangerously-set-department blockquote h2 {
+  @apply text-center font-medium my-1;
+} 
+
+.dangerously-set-department h2 {
+  @apply font-probapro text-2xl my-5 font-semibold mx-auto text-center text-headerSecond;
+}
+
+.dangerously-set-department h3 {
+  @apply text-2xl my-2
+}
+
+.dangerously-set-department ol {
+  list-style-type: decimal;
+  @apply text-xl pb-4 pl-4
+}
+
+.dangerously-set-department ol li{
+  @apply my-2
+}
+
+.dangerously-set-department ol li ul {
+  list-style-type: "— ";
+  @apply pl-4
+}
+
+.dangerously-set-department ul {
+  list-style-type: "— ";
+  @apply text-xl font-probapro my-2 pl-4
+}
+
+.dangerously-set-department ul li {
+  @apply first-letter:capitalize my-2
+}
+
+.dangerously-set-department ul li ul {
+  list-style-type: "- ";
+  @apply pl-4
+}
+
 .dangerously-set-news p {
   font-size: 1.2rem;
 }
