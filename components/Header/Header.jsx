@@ -232,7 +232,7 @@ const Header = (props) => {
                                             {filteredObjects
                                                 .filter((item) => item.subcategory === subcategory)
                                                 .map((item) => (
-                                                    <li className='topic' key={item.link} onClick={() => { setOpenedTab(undefined); navigate(item.link); }}><p>{item.text}</p></li>
+                                                    <li className='topic' key={item.link} onClick={() => { setOpenedTab(undefined); setPrevTab(undefined); navigate(item.link); }}><p>{item.text}</p></li>
                                                 ))}
                                         </ul>
                                     </div>
