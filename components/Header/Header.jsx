@@ -160,6 +160,11 @@ const Header = (props) => {
         }
 
     ]
+    window.openedTab = openedTab
+    window.prevTab = prevTab
+    useEffect(() => {
+        console.log(openedTab);
+    }, [openedTab])
 
     const filteredObjects = headerNavStaticState.filter(
         (item) => item.category === openedTab
@@ -176,8 +181,8 @@ const Header = (props) => {
         } else {
 
             if (prevTab === e.target.childNodes[0].data) {
-                setOpenedTab(undefined)
                 setPrevTab(undefined)
+                setOpenedTab(undefined)
             } else {
                 setOpenedTab(e.target.childNodes[0].data)
                 setPrevTab(e.target.childNodes[0].data)
@@ -232,7 +237,7 @@ const Header = (props) => {
                                             {filteredObjects
                                                 .filter((item) => item.subcategory === subcategory)
                                                 .map((item) => (
-                                                    <li className='topic' key={item.link} onClick={() => { navigate(item.link); setOpenedTab(undefined) }}><p>{item.text}</p></li>
+                                                    <li className='topic' key={item.link} onClick={() => { setOpenedTab(undefined); navigate(item.link); }}><p>{item.text}</p></li>
                                                 ))}
                                         </ul>
                                     </div>
@@ -265,7 +270,7 @@ const Header = (props) => {
                 </div>
             </div>
             {openedTab !== undefined &&
-                <div className='w-full h-screen fixed z-[2] top-0 left-0' onClick={() => setOpenedTab(undefined)}>
+            <div className='w-full h-screen fixed z-[2] top-0 left-0' onClick={() => {setOpenedTab(undefined); setPrevTab(undefined)}}>
                 </div>}
 
         </header>
