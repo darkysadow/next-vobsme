@@ -160,11 +160,6 @@ const Header = (props) => {
         }
 
     ]
-    window.openedTab = openedTab
-    window.prevTab = prevTab
-    useEffect(() => {
-        console.log(openedTab);
-    }, [openedTab])
 
     const filteredObjects = headerNavStaticState.filter(
         (item) => item.category === openedTab

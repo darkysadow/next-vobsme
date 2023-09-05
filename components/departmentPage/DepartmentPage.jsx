@@ -4,7 +4,6 @@ import FontAwesomePhone from "../fontAwesomeClientComponents/Phone";
 import Image from "next/image";
 
 export default function DepartmentPage({departmentData, headOfDepartment, headOfDepartmentPhoto, description}) {
-    console.log(departmentData.data.attributes);
     return (
         <main className="container mx-auto px-5 text-[black] font-probapro flex flex-col py-8">
             <h1 className="text-center font-semibold text-2xl text-headerSecond mb-6">
