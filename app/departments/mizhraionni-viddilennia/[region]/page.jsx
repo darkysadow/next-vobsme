@@ -7,7 +7,7 @@ export default async function Region({params}) {
     const headOfDepartmentPhoto = headOfDepartment !== undefined && headOfDepartment.photo.data.attributes
     const description = await markdownToHTML(depRes.data.attributes.description)
     return (
-        <main className="container mx-auto text-[black]">
+        <main className="container px-5 mx-auto text-[black]">
             region {params.region}
         </main>
     )

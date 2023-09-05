@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default async function MizhraionniViddilennia() {
     const depList = await fetcher(`${process.env.STRAPI_API_URL}/idepartments`)
-    return (<div className="container mx-auto text-[black] flex flex-col py-5 font-probapro">
+    return (<div className="container mx-auto px-5 text-[black] flex flex-col py-5 font-probapro">
         <h1 className="mx-auto text-2xl font-semibold text-headerSecond mb-4">Міжрайонні відділення:</h1>
         <div className="flex flex-row justify-evenly items-center max-md:flex-col-reverse max-md:gap-y-5">
             <ul className="pl-3 text-xl ">

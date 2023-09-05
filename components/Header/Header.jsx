@@ -188,7 +188,7 @@ const Header = (props) => {
     return (
         <header>
             <div className='bg-headerFirst bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#4478d7] to-headerFirst'>
-                <div className="container mx-auto">
+                <div className="container mx-auto px-5">
                     <div className='flex w-full justify-center items-center flex-col pt-5 pb-6 gap-3'>
                         <div className='w-[110px] h-[110px]'>
                             <img src={'/FTOWHITE.png'} className='w-full h-full' alt="" />

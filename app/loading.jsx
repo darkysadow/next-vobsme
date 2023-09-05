@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/Skeleton";
 
 export default function Loading() {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto px-5">
             <Skeleton className='h-4 w-[200px] my-2 ' />
             <div className="container mx-auto text-[black] flex flex-row gap-x-[3.3%] max-md:flex-wrap max-md:gap-y-3">
                 <div className="relative w-[30%] max-md:w-[45%] max-[492px]:w-[100%] flex flex-col items-start justify-start shadow-xl p-2 pb-11 pt-8">

@@ -11,7 +11,7 @@ export default async function Department({params}) {
     const headOfDepartmentPhoto = headOfDepartment !== undefined && headOfDepartment.photo.data.attributes
     const description = await markdownToHTML(departmentData.data.attributes.description)
     return (
-        <main className="container mx-auto text-[black] font-probapro flex flex-col py-8">
+        <main className="container mx-auto px-5 text-[black] font-probapro flex flex-col py-8">
             <h1 className="text-center font-semibold text-2xl text-headerSecond mb-6">
                 {departmentData.data.attributes.title}
             </h1>

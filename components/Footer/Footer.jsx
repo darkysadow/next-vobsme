@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <footer className="mt-auto py-4text-[black] w-full relative before:absolute before:h-[1px] before:w-[90%] before:left-[5%] before:top-0 before:bg-headerFirst before:opacity-20">
-            <div className="container mx-auto flex flex-row max-md:flex-col py-5 justify-between max-md:space-y-5">
+            <div className="container mx-auto px-5 flex flex-row max-md:flex-col py-5 justify-between max-md:space-y-5">
                 <div className="w-[60%] max-md:w-full">
                     <div className="flex flex-row flex-wrap gap-4 max-md:justify-center max-md:gap-4 max-md:items-center text-[gray]">
                         <Link href='/finances' className="hover:underline">Інформація про фінансову діяльність</Link>

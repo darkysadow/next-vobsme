@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/Skeleton";
 
 export default function MizhraionniViddilenniaLoader() {
     return (
-        <div className="container mx-auto flex flex-col py-5">
+        <div className="container mx-auto px-5 flex flex-col py-5">
             <Skeleton className='mx-auto h-4 w-[310px] mb-4' />
             <div className="flex flex-row justify-evenly items-center max-md:flex-col-reverse max-md:gap-y-5">
                 <div className="flex flex-col">
