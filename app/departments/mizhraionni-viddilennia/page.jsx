@@ -14,7 +14,7 @@ export default async function MizhraionniViddilennia() {
                         href={"mizhraionni-viddilennia/"+depItem.attributes.slug} 
                         className="relative hover:text-headerFirst before:w-full before:h-[.5px] before:bg-headerSecond before:absolute before:bottom-0 before:transition-all before:scale-x-0 hover:before:scale-x-100 transition-all duration-300" 
                     >{
-                        depItem.attributes.name}
+                        depItem.attributes.title}
                     </Link>
                 </li>)}
             </ul>
