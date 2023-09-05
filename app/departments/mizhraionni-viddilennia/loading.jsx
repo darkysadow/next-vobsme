@@ -1,5 +1,6 @@
 import { Skeleton } from "@/components/Skeleton";
 
+
 export default function MizhraionniViddilenniaLoader() {
     return (
         <div className="container mx-auto flex flex-col py-5">

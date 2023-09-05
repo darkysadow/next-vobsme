@@ -1,4 +1,5 @@
-import AllNews from './components/News/News'
+import AllNews from "@/components/News/News";
+
 
 export default function Home() {
   return (

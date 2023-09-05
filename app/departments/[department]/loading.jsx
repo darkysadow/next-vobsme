@@ -1,5 +1,6 @@
 import { Skeleton } from "@/components/Skeleton";
 
+
 export default function DepartmentLoading() {
     // You can add any UI inside Loading, including a Skeleton.
     return (<div className="container mx-auto">

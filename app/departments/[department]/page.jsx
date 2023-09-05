@@ -1,5 +1,5 @@
-import FontAwesomeEmail from "@/app/components/fontAwesomeClientComponents/Email";
-import FontAwesomePhone from "@/app/components/fontAwesomeClientComponents/Phone";
+import FontAwesomeEmail from "@/components/fontAwesomeClientComponents/Email";
+import FontAwesomePhone from "@/components/fontAwesomeClientComponents/Phone";
 import { fetcher } from "@/lib/api";
 import { markdownToHTML } from "@/lib/markdownToHTML";
 import Image from "next/image";

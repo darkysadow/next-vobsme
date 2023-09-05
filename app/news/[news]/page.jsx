@@ -1,6 +1,5 @@
 import { fetcher } from "@/lib/api"
 import { markdownToHTML } from "@/lib/markdownToHTML";
-import Link from "next/link";
 
 export default async function SingleNewsPage({params}) {
     const newsResponse = await fetcher(`${process.env.STRAPI_API_URL}/slugify/slugs/news/${params.news}?populate=*`)
