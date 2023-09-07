@@ -157,6 +157,12 @@ const Header = (props) => {
             text: 'Мапа сайту',
             subcategory: 'Мапа сайту',
             category: 'Інформація'
+        },
+        {
+            link: "https://www.vnmu.edu.ua/department/department/58",
+            text: 'Перейти на сайт кафедри',
+            subcategory: 'Посилання',
+            category: 'Кафедра'
         }
 
     ]
@@ -216,7 +222,7 @@ const Header = (props) => {
                                 <li className={openedTab === "Контакти" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => changeOpenedTab(e)}>
                                     Контакти
                                 </li>
-                                <li className={openedTab === "Кафедра" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => { window.location.href = 'https://www.vnmu.edu.ua/department/department/58';; setOpenedTab(undefined) }}>
+                                <li className={openedTab === "Кафедра" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => changeOpenedTab(e)}>
                                     Кафедра
                                 </li>
                             </ul>
