@@ -7,14 +7,14 @@ export default function DepartmentPage({departmentData, headOfDepartment, headOf
     return (
         <main className="container mx-auto px-5 text-[black] font-probapro flex flex-col py-8">
             <h1 className="text-center font-semibold text-2xl text-headerSecond mb-6">
-                {departmentData.data.attributes.title}
+                {departmentData.data.attributes.title ? departmentData.data.attributes.title : departmentData.data.attributes.name}
             </h1>
             <div dangerouslySetInnerHTML={{__html: description}} className="dangerously-set-department"></div>
             
             {departmentData.data.attributes.head_of_department.data && 
             <>
             <h2 className="text-center font-semibold text-2xl text-headerSecond my-6">
-                Завідуючий {departmentData.data.attributes.title.toLowerCase().includes('відділення') ? "відділенням" : "відділом"}
+                Завідуючий {departmentData.data.attributes.title ? (departmentData.data.attributes.title.toLowerCase().includes('відділення') ? "відділенням" : "відділом") : departmentData.data.attributes.name.toLowerCase().includes('відділення') ? "відділенням" : "відділом"}
             </h2>
             <div className="flex flex-row justify-evenly">
                 <div className="flex flex-col font-probaprosmbd text-headerSecond gap-y-3">
