@@ -19,7 +19,7 @@ export default function DepartmentPage({departmentData, headOfDepartment, headOf
             <div className="flex flex-row justify-evenly">
                 <div className="flex flex-col font-probaprosmbd text-headerSecond gap-y-3">
                     <h2 className="text-headerFirst text-xl mb-4 ">{headOfDepartment.name}</h2>
-                    {headOfDepartment.contacts.tel && headOfDepartment.contacts.tel.map(tel => <div className="flex flex-row gap-4 items-center">
+                    {headOfDepartment.contacts.tel && headOfDepartment.contacts.tel.map((tel, index) => <div key={index} className="flex flex-row gap-4 items-center">
                         <FontAwesomePhone />
                         <Link href={`tel:${tel}`} style={{letterSpacing: '1px'}}>{tel}</Link>
                     </div>)}

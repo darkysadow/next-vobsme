@@ -12,7 +12,6 @@ export default async function Department({params}) {
 
         <Suspense fallback={<div className="container mx-auto py-[50px] text-center text-headerSecond font-probapro text-2xl">Завантаження</div>}>
             <DepartmentPage departmentData={departmentData} headOfDepartment={headOfDepartment} headOfDepartmentPhoto={headOfDepartmentPhoto} description={description}/>
-
         </Suspense>
     )
 }

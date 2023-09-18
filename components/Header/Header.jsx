@@ -5,6 +5,8 @@ import s from './../header.module.css'
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
 
 const Header = (props) => {
     const [openedTab, setOpenedTab] = useState(undefined)
@@ -258,9 +260,9 @@ const Header = (props) => {
                                         </div>
                                         <div>
                                             <ul className="flex flex-col gap-4">
-                                                <li className="flex flex-row gap-3 items-center justify-start"><FontAwesomeIcon icon={faPhone} color="#f8ffff" /><a href="tel:0432552880" className="text-base text-[#f8ffff]">(0432)55-28-80</a></li>
-                                                <li className="flex flex-row gap-3 items-center justify-start"><FontAwesomeIcon icon={faEnvelope} color="#f8ffff" /><a href="mailto:oblsme_vin@ukr.net" className="text-base text-[#f8ffff]">oblsme_vin@ukr.net</a></li>
-                                                <li className="flex flex-row gap-3 items-center justify-start"><FontAwesomeIcon icon={faLocationDot} color="#f8ffff" />м.Вінниця, вул. Г.Успенського, 83</li>
+                                                <li className="flex flex-row gap-3 items-center justify-start"><FontAwesomeIcon className="w-[22px]" icon={faPhone} color="#f8ffff" /><a href="tel:0432552880" className="text-base text-[#f8ffff]">(0432)55-28-80</a></li>
+                                                <li className="flex flex-row gap-3 items-center justify-start"><FontAwesomeIcon className="w-[22px]" icon={faEnvelope} color="#f8ffff" /><a href="mailto:oblsme_vin@ukr.net" className="text-base text-[#f8ffff]">oblsme_vin@ukr.net</a></li>
+                                                <li className="flex flex-row gap-3 items-center justify-start"><FontAwesomeIcon className="w-[22px]" icon={faLocationDot} color="#f8ffff" />м.Вінниця, вул. Г.Успенського, 83</li>
                                             </ul>
                                         </div>
                                     </div>}
