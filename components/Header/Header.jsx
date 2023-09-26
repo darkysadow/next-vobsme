@@ -131,25 +131,25 @@ const Header = (props) => {
             category: 'Інформація'
         },
         {
-            link: '21',
+            link: '/information/finances/2021',
             text: 'Інформація за 2021 рік',
             subcategory: 'Фінансова діяльність',
             category: 'Інформація'
         },
         {
-            link: '22',
+            link: '/information/finances/2022',
             text: 'Інформація за 2022 рік',
             subcategory: 'Фінансова діяльність',
             category: 'Інформація'
         },
         {
-            link: '23',
+            link: '/information/finances/2023',
             text: 'Інформація за 2023 рік',
             subcategory: 'Фінансова діяльність',
             category: 'Інформація'
         },
         {
-            link: '24',
+            link: '/information/finances/koshtoris',
             text: 'Кошторис',
             subcategory: 'Фінансова діяльність',
             category: 'Інформація'
