@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    STRAPI_URL: process.env.STRAPI_URL,
+    STRAPI_API_URL: process.env.STRAPI_API_URL
+  },
     images: {
         remotePatterns: [
           {
@@ -9,6 +13,23 @@ const nextConfig = {
             pathname: '/uploads/**',
           },
         ],
+      },
+      webpack: (config) => {
+        config.experiments = {
+          ...config.experiments,
+          topLevelAwait: true,
+        }
+        config.resolve.fallback = {
+          process: require.resolve('process/browser'),
+          zlib: require.resolve('browserify-zlib'),
+          stream: require.resolve('stream-browserify'),
+          util: require.resolve('util'),
+          buffer: require.resolve('buffer'),
+          asset: require.resolve('assert'),
+        }
+        config.externals.push({ sharp: 'commonjs sharp', canvas: 'commonjs canvas' })
+        
+        return config
       }
 }
 
