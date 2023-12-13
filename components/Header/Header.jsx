@@ -212,19 +212,29 @@ const Header = (props) => {
                     <div className="container mx-auto">
                         <nav className='w-full flex flex-row justify-center items-center relative px-2'>
                             <ul className="h-16 flex flex-row justify-between items-center text-white w-full font-probapro text-lg leading-6 font-semibold antialiased text-center">
-                                <li className={openedTab === "Головна" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => { navigate('/'); setOpenedTab(undefined) }}>
+                                <li 
+                                    onClick={(e) => { navigate('/'); setOpenedTab(undefined) }}
+                                    className={openedTab === "Головна" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`}>
                                     Головна
                                 </li>
-                                <li className={openedTab === "ВОБ СМЕ" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => changeOpenedTab(e)}>
+                                <li 
+                                    onClick={(e) => changeOpenedTab(e)}
+                                    className={openedTab === "ВОБ СМЕ" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`}>
                                     ВОБ СМЕ
                                 </li>
-                                <li className={openedTab === "Інформація" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => changeOpenedTab(e)}>
+                                <li 
+                                    onClick={(e) => changeOpenedTab(e)}
+                                    className={openedTab === "Інформація" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`}>
                                     Інформація
                                 </li>
-                                <li className={openedTab === "Контакти" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => changeOpenedTab(e)}>
+                                <li 
+                                    onClick={(e) => changeOpenedTab(e)}
+                                    className={openedTab === "Контакти" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`}>
                                     Контакти
                                 </li>
-                                <li className={openedTab === "Кафедра" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`} onClick={(e) => changeOpenedTab(e)}>
+                                <li 
+                                    onClick={(e) => changeOpenedTab(e)}
+                                    className={openedTab === "Кафедра" ? `${'nav-li-style'} ${'nav-li-style-active'}` : `${'nav-li-style'}`}>
                                     Кафедра
                                 </li>
                             </ul>
